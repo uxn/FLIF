@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="image">
+      <UniqueIdentifier>{bc0c20cd-cb8f-41a4-991d-160d065355bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="maniac">
+      <UniqueIdentifier>{cd1be7bc-18da-4371-9556-2cb84e707cec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transform">
+      <UniqueIdentifier>{5e3330bb-9a87-40a3-9c7b-73edd4069a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="getopt">
+      <UniqueIdentifier>{396efbdb-b695-4cf9-8267-3c2543643da3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="image\color_range.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\crc32k.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image-pam.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image-png.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="image\image-pnm.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="maniac\chance.cpp">
+      <Filter>maniac</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\factory.cpp">
+      <Filter>transform</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="flif.cpp" />
+    <ClCompile Include="flif-dec.cpp" />
+    <ClCompile Include="flif-enc.cpp" />
+    <ClCompile Include="io.cpp" />
+    <ClCompile Include="maniac\bit.cpp">
+      <Filter>maniac</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt\getopt.c">
+      <Filter>getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="getopt\getopt_long.c">
+      <Filter>getopt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="image\color_range.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\crc32k.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image-pam.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image-png.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image-pnm.h">
+      <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="maniac\chance.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="maniac\compound.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="maniac\rac.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="maniac\symbol.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="maniac\util.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\bounds.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\colorbuckets.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\factory.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\framecombine.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\framedup.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\frameshape.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\palette.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\palette_A.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\transform.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\yiq.h">
+      <Filter>transform</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="flif-dec.h" />
+    <ClInclude Include="flif-enc.h" />
+    <ClInclude Include="io.h" />
+    <ClInclude Include="maniac\bit.h">
+      <Filter>maniac</Filter>
+    </ClInclude>
+    <ClInclude Include="getopt\getopt.h">
+      <Filter>getopt</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
