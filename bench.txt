@@ -2,6 +2,22 @@ lena_std (png ni: 476216):
 	interlace (445352):
 		encode: 3700
 		decode: 500
+		q=50: 50
 	no-interlace (439894):
 		encode: 3720
 		decode: 470
+
+ISO_12233-reschart (png ni: 1526024):
+	interlace (335829):
+		encode: 286000
+		decode: 24000
+	interlace r1 (347948):
+		encode: 114000
+		decode: 23100
+
+a4:
+	djvu jb2: 32255
+	flif: 42440
+	flif ni: 44259
+	tif g4: 61537
+	png ni: 103552
