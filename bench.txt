@@ -1,0 +1,7 @@
+lena_std (png ni: 476216):
+	interlace (445352):
+		encode: 3700
+		decode: 500
+	no-interlace (439894):
+		encode: 3720
+		decode: 470

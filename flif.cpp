@@ -25,6 +25,9 @@
 
 #include <string>
 #include <string.h>
+#include <chrono>
+
+using namespace std::chrono;
 
 #include "maniac/rac.h"
 #include "maniac/compound.h"
@@ -201,7 +204,11 @@ bool handle_encode_arguments(int argc, char **argv, Images &images, int palette_
     if (!file)
         return false;
     FileIO fio(file, argv[0]);
-    return flif_encode(fio, images, desc, method.encoding, learn_repeats, acb, frame_delay, palette_size, lookback);
+    const auto tim0 = high_resolution_clock::now();
+    const auto result = flif_encode(fio, images, desc, method.encoding, learn_repeats, acb, frame_delay, palette_size, lookback);
+    const auto tim1 = high_resolution_clock::now();
+    printf("encoded in %lld msec\n", duration_cast<milliseconds>(tim1 - tim0).count());
+    return result;
 }
 
 int handle_decode_arguments(char **argv, Images &images, int quality, int scale) {
@@ -217,7 +224,10 @@ int handle_decode_arguments(char **argv, Images &images, int quality, int scale)
         return 1;
     FileIO fio(file, argv[0]);
 
+    const auto tim0 = high_resolution_clock::now();
     if (!flif_decode(fio, images, quality, scale)) return 3;
+    const auto tim1 = high_resolution_clock::now();
+    printf("decoded in %lld msec\n", duration_cast<milliseconds>(tim1 - tim0).count());
     if (scale>1)
         v_printf(3,"Downscaling output: %ux%u -> %ux%u\n",images[0].cols(),images[0].rows(),images[0].cols()/scale,images[0].rows()/scale);
     if (images.size() == 1) {
