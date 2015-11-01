@@ -11,7 +11,7 @@
       <UniqueIdentifier>{5e3330bb-9a87-40a3-9c7b-73edd4069a93}</UniqueIdentifier>
     </Filter>
     <Filter Include="getopt">
-      <UniqueIdentifier>{396efbdb-b695-4cf9-8267-3c2543643da3}</UniqueIdentifier>
+      <UniqueIdentifier>{fee7ce6d-6e2c-414e-bf50-95da8faf990c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -47,14 +47,11 @@
     <ClCompile Include="maniac\bit.cpp">
       <Filter>maniac</Filter>
     </ClCompile>
-    <ClCompile Include="getopt\getopt.c">
-      <Filter>getopt</Filter>
-    </ClCompile>
-    <ClCompile Include="getopt\getopt_long.c">
-      <Filter>getopt</Filter>
-    </ClCompile>
     <ClCompile Include="image\image-rggb.cpp">
       <Filter>image</Filter>
+    </ClCompile>
+    <ClCompile Include="build\MSVC\getopt\getopt.c">
+      <Filter>getopt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,11 +125,11 @@
     <ClInclude Include="maniac\bit.h">
       <Filter>maniac</Filter>
     </ClInclude>
-    <ClInclude Include="getopt\getopt.h">
-      <Filter>getopt</Filter>
-    </ClInclude>
     <ClInclude Include="image\image-rggb.h">
       <Filter>image</Filter>
+    </ClInclude>
+    <ClInclude Include="build\MSVC\getopt\getopt.h">
+      <Filter>getopt</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
