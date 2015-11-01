@@ -30,6 +30,7 @@
     <ClCompile Include="image\image-pam.cpp" />
     <ClCompile Include="image\image-png.cpp" />
     <ClCompile Include="image\image-pnm.cpp" />
+    <ClCompile Include="image\image-rggb.cpp" />
     <ClCompile Include="image\image.cpp" />
     <ClCompile Include="io.cpp" />
     <ClCompile Include="maniac\bit.cpp" />
@@ -46,6 +47,7 @@
     <ClInclude Include="image\image-pam.h" />
     <ClInclude Include="image\image-png.h" />
     <ClInclude Include="image\image-pnm.h" />
+    <ClInclude Include="image\image-rggb.h" />
     <ClInclude Include="image\image.h" />
     <ClInclude Include="io.h" />
     <ClInclude Include="maniac\bit.h" />

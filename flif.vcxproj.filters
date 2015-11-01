@@ -53,6 +53,9 @@
     <ClCompile Include="getopt\getopt_long.c">
       <Filter>getopt</Filter>
     </ClCompile>
+    <ClCompile Include="image\image-rggb.cpp">
+      <Filter>image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="image\color_range.h">
@@ -127,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="getopt\getopt.h">
       <Filter>getopt</Filter>
+    </ClInclude>
+    <ClInclude Include="image\image-rggb.h">
+      <Filter>image</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
