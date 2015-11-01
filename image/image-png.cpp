@@ -5,9 +5,9 @@
 
 #ifdef FLIF_USE_STB_IMAGE
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "../extern/stb_image.h"
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "stb_image_write.h"
+#include "../extern/stb_image_write.h"
 enum {
   PNG_COLOR_TYPE_GRAY = 1,
   PNG_COLOR_TYPE_GRAY_ALPHA = 2,
@@ -21,10 +21,10 @@ enum {
 
 #include <vector>
 
-#include "image.h"
-#include "image-png.h"
+#include "image.hpp"
+#include "image-png.hpp"
 
-#include "../common.h"
+#include "../common.hpp"
 
 #ifdef HAS_ENCODER
 int image_load_png(const char *filename, Image &image) {

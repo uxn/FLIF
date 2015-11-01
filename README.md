@@ -16,13 +16,24 @@ For more information on FLIF, visit http://flif.info
 
 ###Build Instructions
 
+**GNU/Linux**
+
+* Install the dependencies:
+  * for the encoder/decoder: `sudo apt-get install libpng-dev`
+  * for the viewer: `sudo apt-get install libsdl2-dev`
+* Navigate to the FLIF directory and run `make` to build `flif`
+  * `make libflif.so` to build the shared library
+  * `make viewflif` to build the example viewer
+* `sudo make install` if you want to install it globally
+
 **Windows**
 
 * Install Visual Studio
   ([VS Community 2015](https://www.visualstudio.com/en-us/products/free-developer-offers-vs.aspx)
   is free for open source projects)
-* Click Start > All Programs > Visual Studio > Tools > `Developer Command Prompt`
-* In the command prompt, navigate to the FLIF repo and run `make_vs.bat`
+* Open the `build\MSVC` folder and Double click the `dl_make_vs.bat`. This will download required libraries and run `nmake` to build `flif.exe`
+  * `nmake libflif.dll` to build the shared library
+  * `nmake viewflif.exe` to build the example viewer
 
 **OS X**
 
@@ -30,10 +41,6 @@ For more information on FLIF, visit http://flif.info
 * Install kegs named `pkg-config` and `libpng`
 * Run `make` in the FLIF directory
 
-**Ubuntu**
-
-* Install libpng-dev: `sudo apt-get install libpng-dev`
-* Navigate to the FLIF directory and run `make`
 
 * * *
 
@@ -45,7 +52,7 @@ These will be available on the Release page
 
 * * *
 
-###Other Projects
+###Related Projects
 
 * **[Poly-FLIF](https://uprootlabs.github.io/poly-flif)** - A javascript polyfill that allows you to use FLIF files in the browser.
 * **[UGUI: FLIF](https://github.com/FLIF-hub/UGUI_FLIF/releases)** - A GUI that allows you to convert and view FLIF files.

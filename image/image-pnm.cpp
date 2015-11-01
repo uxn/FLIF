@@ -3,10 +3,10 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "image.h"
-#include "image-pnm.h"
-#include "image-pam.h"
-#include "../common.h"
+#include "image.hpp"
+#include "image-pnm.hpp"
+#include "image-pam.hpp"
+#include "../common.hpp"
 
 #define PPMREADBUFLEN 256
 
@@ -39,7 +39,7 @@ bool image_load_pnm(const char *filename, Image& image) {
     do {
         /* # comments before the first line */
         t = fgets(buf, PPMREADBUFLEN, fp);
-        if ( t == NULL ) return 1;
+        if ( t == NULL ) return false;
     } while ( strncmp(buf, "#", 1) == 0 || strncmp(buf, "\n", 1) == 0);
     int type=0;
     if ( (!strncmp(buf, "P4", 2)) ) type=4;

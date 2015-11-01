@@ -2,10 +2,10 @@
 
 #include "flif.h"
 
-#include "image/image.h"
-#include "flif-dec.h"
-#include "flif-enc.h"
-#include "fileio.h"
+#include "image/image.hpp"
+#include "flif-dec.hpp"
+#include "flif-enc.hpp"
+#include "fileio.hpp"
 
 struct FLIF_IMAGE
 {
@@ -33,7 +33,7 @@ struct FLIF_DECODER
 private:
     Images internal_images;
     Images images;
-//    std::vector<std::unique_ptr<FLIF_IMAGE>> requested_images;
+    std::vector<std::unique_ptr<FLIF_IMAGE>> requested_images;
 };
 
 struct FLIF_ENCODER
