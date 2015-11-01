@@ -10,8 +10,8 @@
 
 #define PPMREADBUFLEN 256
 
-bool image_load_pam(const char *filename, Image& image)
-{
+#ifdef HAS_ENCODER
+bool image_load_pam(const char *filename, Image& image) {
     FILE *fp = fopen(filename,"rb");
     char buf[PPMREADBUFLEN], *t;
 
@@ -47,6 +47,12 @@ bool image_load_pam(const char *filename, Image& image)
         return false;
     }
 
+#ifndef SUPPORT_HDR
+    if (maxval > 0xff) {
+        e_printf("PAM file has more than 8 bit per channel, this FLIF cannot handle that.\n");
+        return false;
+    }
+#endif
 
     unsigned int nbplanes=depth;
     image.init(width, height, 0, maxval, nbplanes);
@@ -73,6 +79,7 @@ bool image_load_pam(const char *filename, Image& image)
     fclose(fp);
     return true;
 }
+#endif
 
 bool image_save_pam(const char *filename, const Image& image)
 {

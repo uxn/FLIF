@@ -26,6 +26,7 @@ enum {
 
 #include "../common.h"
 
+#ifdef HAS_ENCODER
 int image_load_png(const char *filename, Image &image) {
 #ifdef FLIF_USE_STB_IMAGE
 
@@ -104,6 +105,12 @@ int image_load_png(const char *filename, Image &image) {
   else if (color_type == PNG_COLOR_TYPE_RGB) nbplanes=3;
   else if (color_type == PNG_COLOR_TYPE_RGB_ALPHA || color_type == PNG_COLOR_TYPE_GRAY_ALPHA) nbplanes=4;
   else { printf("Unsupported PNG color type\n"); return 5; }
+#ifndef SUPPORT_HDR
+    if (bit_depth > 8) {
+        e_printf("PNG file has more than 8 bit per channel, this FLIF cannot handle that.\n");
+        return 6;
+    }
+#endif
   image.init(width, height, 0, (1<<bit_depth)-1, nbplanes);
 
   png_bytepp rows = png_get_rows(png_ptr,info_ptr);
@@ -206,7 +213,7 @@ int image_load_png(const char *filename, Image &image) {
   return 0;
 #endif
 }
-
+#endif
 
 int image_save_png(const char *filename, const Image &image) {
 #ifdef FLIF_USE_STB_IMAGE
